@@ -237,33 +237,7 @@ public class AddReminder extends Activity {
 	  Spinner spinner = (Spinner)findViewById(R.id.spinnerAbout);
 	  return spinner.getSelectedItemPosition() + 1;
 	  
-	//  String szAbout = (String)spinner.getSelectedItem();
-	//  
-	//  int i =  szAbout.compareToIgnoreCase("Birthday");
-	//  if( i == 0)
-	//  {
-	//   return 1;
-	//  }
-	//  
-	//  i = szAbout.compareToIgnoreCase("Anniversary");
-//	     if (i ==0)
-	//  {
-//	     return 2;
-	//  }
-	//  
-	//  i = szAbout.compareToIgnoreCase("Events");
-	//   if (i ==0)
-	//   {
-//	      return 3;
-	//   }
-	//  
-	//  i = szAbout.compareToIgnoreCase("Appointment");
-//	       if (i ==0)
-//	     {
-//	       return 4;
-//	     }
-//	       
-//	       return -1;
+	
 	 }
 	
 	public void chooseDate(View v){
