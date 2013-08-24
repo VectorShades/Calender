@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Calender</string>
+    <string name="action_settings">Settings</string>
+    <string name="dayView">shows day view</string>
+    <string name="weekView">shows week view</string>
+    <string name="monthView">shows month view</string>
+    <string name="eventsView">shows events</string>
+    <string name="weekdays">shows week day</string>
+    <string name="refresh">Refreshes the calender to present day</string>
+    <string name="image1">shows something</string>
+    <string name="remind_about">Remind Me About</string>
+    <string name="description">description</string>
+    <string-array name="reminder_list">
+        <item>Birthday</item>
+        <item>Anniversary</item>
+        <item>Events</item>
+        <item>Appointment</item>
+    </string-array>
+    <string name="reminder_prompt">Remind About</string>
+    <string name="alarm">Put An Alarm</string>
+    
+    <string name="on">On</string>
+    <string name="at">At</string>
+    <string name="submit">Submit</string>
+    <string name="Description">Description :</string>
+    <string name="Date">Date :</string>
+    <string name="Time">Time :</string>
+    
+
+</resources>

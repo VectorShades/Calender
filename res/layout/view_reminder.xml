@@ -1,0 +1,118 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/calender_topdown_back" >
+
+        <DigitalClock
+            android:id="@+id/digitalClock1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#B9D3EE" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textIsSelectable="true"
+            android:textColor="#B9D3EE" />
+
+        <ImageView
+            android:id="@+id/b_addreminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/eventsView"
+            android:src="@drawable/day_view" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="28dp"
+        android:layout_weight="0.02"
+        android:background="@drawable/new_reminder"
+        android:orientation="vertical" >
+
+         
+         <TextView 
+                    android:id="@+id/top_text"
+            		android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" 
+                    android:textSize="24sp" 
+                    android:textStyle="bold"
+                    android:singleLine="true" 
+                    android:textColor="#000080"
+                    android:textIsSelectable="true"
+                    />
+
+            </LinearLayout>
+         
+    <ListView
+        android:id="@+id/addReminderView"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1.97"
+        android:background="@drawable/calender_topdown_back"
+        android:clipChildren="true"
+        android:gravity="center"
+        android:horizontalSpacing="5dip"
+        android:orientation="vertical"
+        android:verticalSpacing="5dip" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/calender_topdown_back" >
+
+        <ImageButton
+            android:id="@+id/b_todayView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:contentDescription="@string/eventsView"
+            android:src="@drawable/dayview" />
+
+        <ImageButton
+            android:id="@+id/b_allView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/eventsView"
+            android:src="@drawable/all_reminderview" />
+
+        <ImageButton
+            android:id="@+id/b_weekView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="68dp"
+            android:layout_toRightOf="@+id/b_allView"
+            android:contentDescription="@string/eventsView"
+            android:src="@drawable/weekview" />
+
+        <ImageButton
+            android:id="@+id/b_monthView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="67dp"
+            android:layout_toLeftOf="@+id/b_todayView"
+            android:contentDescription="@string/eventsView"
+            android:src="@drawable/monthview" />
+        
+    </RelativeLayout>
+
+</LinearLayout>

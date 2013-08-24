@@ -1,0 +1,202 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_weight="0.01"
+        android:background="@drawable/calender_topdown_back" >
+
+       <DigitalClock
+            android:id="@+id/digitalClock1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" 
+            android:textColor="#B9D3EE"/>
+
+        <ImageView
+            android:id="@+id/add_reminder2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/day_view"
+             />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textIsSelectable="true" 
+            android:textColor="#B9D3EE"/>
+        
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1.30"
+        android:background="@drawable/calender_topdown_back" >
+
+        <LinearLayout
+            android:id="@+id/addReminderView"
+            android:layout_width="match_parent"
+            android:layout_height="306dp"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/ReminderView"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/addReminder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/weekdays"
+                    android:src="@drawable/add_new_reminder" />
+
+                <TextView
+                    android:id="@+id/velli"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:text="" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/remindAbout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:text="@string/remind_about"
+                android:textSize="20sp" 
+                android:textColor="#B9D3EE"/>
+
+            <Spinner
+                android:id="@+id/spinnerAbout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:popupBackground="@drawable/txtbackground"
+                android:prompt="@string/reminder_prompt" 
+                
+               />
+<!--
+            <LinearLayout 
+                android:id="@+id/spinner_layout"
+        		android:layout_width="wrap_content"
+       		 	android:layout_height="wrap_content" 
+       		 	android:visibility="gone">
+   
+                <TextView 
+                android:id="@+id/text"
+        		android:layout_width="wrap_content"
+      			android:layout_height="wrap_content"
+      			android:text=""
+      			android:textSize="20sp"
+      			android:visibility="gone"/>
+ -->          	
+            <Spinner
+                android:id="@+id/spinnerRepeat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:popupBackground="@drawable/txtbackground"
+                android:visibility="gone"/>
+            
+            
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/description"
+                android:orientation="vertical" 
+                android:textColor="#B9D3EE"
+                android:background="@drawable/background_edit_text"
+                android:textCursorDrawable="@null">
+            </EditText>
+
+            <TextView
+                android:id="@+id/at_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:text="@string/at"
+                android:textSize="20sp" 
+                android:textColor="#B9D3EE"/>
+
+            <Button
+                android:id="@+id/time_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="chooseTime"
+                android:text=""
+                android:textAlignment="center"
+                 android:textColor="#F2473F"/>
+
+            <TextView
+                android:id="@+id/on_Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:text="@string/on"
+                android:textStyle="bold"
+                android:textSize="20sp" 
+                android:textColor="#B9D3EE"/>
+
+            <Button
+                android:id="@+id/date_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="chooseDate"
+                android:text=""
+                android:textAlignment="center"
+                 android:textColor="#F2473F" />
+
+            
+            
+            <Button
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit" 
+        android:onClick="DoSubmit"
+         android:textColor="#F2473F"
+         />
+            
+            </LinearLayout>
+
+    </ScrollView>
+
+    
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/calender_topdown_back" >
+
+        <ImageView
+            android:id="@+id/eventsView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/eventsView"
+            android:src="@drawable/view_event" />
+        
+    </RelativeLayout>
+    <!--
+      android:layout_toLeftOf="@+id/imageButton2"
+            android:layout_toRightOf="@+id/imageButton1"
+    -->
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+     <ImageView
+         android:id="@+id/imageView1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentTop="true"
+         android:src="@drawable/dialog_image" />
+
+     <TextView
+         android:id="@+id/text"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/dialogButtonDelete"
+         android:layout_alignParentTop="true"
+         android:layout_alignRight="@+id/dialogButtonCancel"
+         android:layout_marginTop="15dp"
+         android:layout_toRightOf="@+id/imageView1"
+         android:text="Do You Want to Delete ?"
+         android:textIsSelectable="true"
+         android:textSize="18sp" />
+
+     <Button
+         android:id="@+id/dialogButtonDelete"
+         android:layout_width="100dp"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@+id/imageView1"
+         android:text=" Delete " />
+
+     <Button
+         android:id="@+id/dialogButtonCancel"
+         android:layout_width="100dp"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/text"
+         android:layout_marginLeft="55dp"
+         android:layout_toRightOf="@+id/dialogButtonDelete"
+         android:text=" Cancel " />
+     
+</RelativeLayout>
