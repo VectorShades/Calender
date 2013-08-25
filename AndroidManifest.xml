@@ -64,6 +64,28 @@
                 <category android:name="android.intent.category.EMBED" />
             </intent-filter>
         </activity>
+        
+            <service android:singleUser="true"
+            android:name="com.sun.reminderservice.ReminderService" 
+            android:enabled="true"
+            android:process=":my_process">
+            
+   
+        </service>
+        <receiver 
+            android:name="com.sun.calender.ReminderBroadcastReceiver"
+            android:enabled="true">
+          
+        </receiver>
+        <receiver android:name="com.sun.calender.BootTimeAlarmReciever"
+            android:enabled="true">
+              <intent-filter>
+      <action android:name="android.intent.action.BOOT_COMPLETED">
+      <category android:name="android.intent.category.DEFAULT"/> 
+      </action>
+            </intent-filter>
+            
+        </receiver>
     </application>
 
 </manifest>
